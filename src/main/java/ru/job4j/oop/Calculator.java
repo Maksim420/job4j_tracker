@@ -17,7 +17,7 @@ public class Calculator {
     }
 
     public double divide(int y) {
-        return (double)y / x;
+        return (double) y / x;
     }
 
     public double sumAllOperation(int y) {
