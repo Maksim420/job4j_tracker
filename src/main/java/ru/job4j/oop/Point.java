@@ -14,7 +14,7 @@ public class Point {
         this.y = second;
     }
 
-    public double distance (Point that) {
+    public double distance(Point that) {
         return sqrt(pow(that.x - this.x, 2) + pow(that.y - this.y, 2));
     }
 
