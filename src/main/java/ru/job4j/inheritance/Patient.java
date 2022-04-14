@@ -11,10 +11,6 @@ public class Patient {
         this.surname = surname;
     }
 
-    public Patient() {
-
-    }
-
     public String getName() {
         return name;
     }

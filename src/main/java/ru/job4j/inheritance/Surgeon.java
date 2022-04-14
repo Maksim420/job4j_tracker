@@ -9,14 +9,6 @@ public class Surgeon extends Doctor {
         this.specialization = spec;
     }
 
-    public Surgeon(String spec) {
-        this.specialization = spec;
-    }
-
-    public Surgeon() {
-
-    }
-
     public String getSpecialization() {
         return specialization;
     }

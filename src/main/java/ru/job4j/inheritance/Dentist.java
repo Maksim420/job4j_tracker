@@ -9,19 +9,11 @@ public class Dentist extends Doctor {
         this.pediatric = pediatric;
     }
 
-    public Dentist(boolean pediatric) {
-        this.pediatric = pediatric;
-    }
-
-    public Dentist() {
-
-    }
-
     public boolean isPediatric() {
         return pediatric;
     }
 
     public Diagnosis checkTeeth(Patient patient) {
-        return new Diagnosis();
+        return new Diagnosis("p1", "Caries");
     }
 }

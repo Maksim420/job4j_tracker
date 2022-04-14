@@ -10,10 +10,6 @@ public class Profession {
        this.surname = surname;
    }
 
-   public Profession() {
-
-   }
-
     public String getName() {
         return name;
     }

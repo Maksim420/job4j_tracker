@@ -9,14 +9,6 @@ public class Engineer extends Profession {
         this.level = level;
     }
 
-    public Engineer(String level) {
-        this.level = level;
-    }
-
-    public Engineer() {
-
-    }
-
     public String getLevel() {
         return level;
     }

@@ -9,19 +9,11 @@ public class Builder extends Engineer {
         this.permit = permit;
     }
 
-    public  Builder(String permit) {
-        this.permit = permit;
-    }
-
-    public Builder() {
-
-    }
-
     public String getPermit() {
         return permit;
     }
 
     public Building build(Design design) {
-        return new Building();
+        return new Building((byte) 3, true);
     }
 }

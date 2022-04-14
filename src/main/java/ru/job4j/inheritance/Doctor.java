@@ -9,14 +9,6 @@ public class Doctor extends Profession {
         this.degree = degree;
     }
 
-    public Doctor(String degree) {
-        this.degree = degree;
-    }
-
-    public Doctor() {
-
-    }
-
     public String getDegree() {
         return degree;
     }

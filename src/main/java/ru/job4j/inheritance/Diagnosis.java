@@ -10,10 +10,6 @@ public class Diagnosis {
         this.description = description;
     }
 
-    public Diagnosis() {
-
-    }
-
     public String getCode() {
         return code;
     }

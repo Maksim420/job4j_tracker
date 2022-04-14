@@ -10,10 +10,6 @@ public class Building {
         this.pool = pool;
     }
 
-    public Building() {
-
-    }
-
     public boolean isPool() {
         return pool;
     }
