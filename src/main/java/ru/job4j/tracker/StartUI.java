@@ -36,11 +36,19 @@ public class StartUI {
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 if (tracker.replace(id, item)) {
-                    System.out.println("Item has been replaced successfully.");
+                    System.out.println("Item has been replaced.");
                 } else {
-                    System.out.println("Item has not been replaced.");
+                    System.out.println("Error. Item has not been replaced.");
                 }
-
+            } else if (select == 3) {
+                System.out.println("=== Delete item ===");
+                System.out.println("Enter item id:");
+                int id = Integer.parseInt(scanner.nextLine());
+                if (tracker.delete(id)) {
+                    System.out.println("Item has been deleted.");
+                } else {
+                    System.out.println("Error. Item has not been deleted.");
+                }
             } else if (select == 6) {
                 run = false;
             }
