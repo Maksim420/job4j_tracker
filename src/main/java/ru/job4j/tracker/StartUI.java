@@ -59,6 +59,18 @@ public class StartUI {
                 } else {
                     System.out.println("Item with id: " + id + " has not been found.");
                 }
+            } else if (select == 5) {
+                System.out.println("=== Find item by name ===");
+                System.out.print("Enter item name: ");
+                String name = scanner.nextLine();
+                Item[] items = tracker.findByName(name);
+                if (items.length > 0) {
+                    for (Item item : items) {
+                        System.out.println(item);
+                    }
+                } else {
+                    System.out.println("Items with name: " + name + " have not been found.");
+                }
             } else if (select == 6) {
                 run = false;
             }
