@@ -1,7 +1,5 @@
 package ru.job4j.tracker;
 
-import java.time.format.DateTimeFormatter;
-
 public class StartUI {
 
     public void init(Input input, Tracker tracker) {
@@ -14,7 +12,7 @@ public class StartUI {
             } else if (select == 1) {
                 showAllItems(tracker);
             } else if (select == 2) {
-                replaceItem(input, tracker);
+                editItem(input, tracker);
             } else if (select == 3) {
                 deleteItem(input, tracker);
             } else if (select == 4) {
@@ -61,7 +59,7 @@ public class StartUI {
         }
     }
 
-    public static void replaceItem(Input input, Tracker tracker) {
+    public static void editItem(Input input, Tracker tracker) {
         System.out.println("=== Replace item ===");
         int id = input.askInt("Enter current item id: ");
         String name = input.askStr("Enter name of new item: ");
