@@ -7,41 +7,5 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.nullValue;
 
 public class StartUITest {
-    @Test
-    public void whenAddItem() {
-        String[] answers = {"Fix PC"};
-        Input input = new StubInput(answers);
-        Tracker tracker = new Tracker();
-        StartUI.createItem(input, tracker);
-        Item created = tracker.findAll()[0];
-        Item expected = new Item("Fix PC");
-        assertThat(created.getName(), is(expected.getName()));
-    }
 
-    @Test
-    public void whenEditItem() {
-        Item item = new Item("New item");
-        Tracker tracker = new Tracker();
-        tracker.add(item);
-        String[] answers = {
-                String.valueOf(item.getId()),
-                "Edited item"
-        };
-        StartUI.editItem(new StubInput(answers), tracker);
-        Item edited = tracker.findById(item.getId());
-        assertThat(edited.getName(), is("Edited item"));
-    }
-
-    @Test
-    public void whenDeleteItem() {
-        Item item = new Item("New item");
-        Tracker tracker = new Tracker();
-        tracker.add(item);
-        String[] answers = {String.valueOf(item.getId())};
-        StartUI.deleteItem(new StubInput(answers), tracker);
-        assertThat(
-                tracker.findById(item.getId()),
-                is(nullValue())
-        );
-    }
 }
