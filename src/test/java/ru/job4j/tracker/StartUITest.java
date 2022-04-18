@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.nullValue;
 
 public class StartUITest {
     @Test
@@ -38,7 +39,9 @@ public class StartUITest {
         tracker.add(item);
         String[] answers = {String.valueOf(item.getId())};
         StartUI.deleteItem(new StubInput(answers), tracker);
-        Item deleted = tracker.findById(item.getId());
-        assertThat(null, is(deleted));
+        assertThat(
+                tracker.findById(item.getId()),
+                is(nullValue())
+        );
     }
 }
