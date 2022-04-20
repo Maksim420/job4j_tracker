@@ -24,12 +24,12 @@ public class StartUITest {
 
     @Test
     public void whenEditItem() {
-        String newName = "New name";
-        Input input = new StubInput(
-                new String[] {"0", "1", newName, "1"}
-        );
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Item name"));
+        String newName = "New name";
+        Input input = new StubInput(
+                new String[] {"0", String.valueOf(item.getId()), newName, "1"}
+        );
         UserAction[] actions = {
                 new EditAction(new ConsoleOutput()),
                 new ExitAction()
