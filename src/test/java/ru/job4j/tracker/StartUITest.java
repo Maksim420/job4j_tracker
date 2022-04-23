@@ -155,4 +155,42 @@ public class StartUITest {
                 + "1. Exit Program" + ln;
         assertThat(out.toString(), is(excepted));
     }
+
+    @Test
+    public void whenInvalidExit() {
+        Tracker tracker = new Tracker();
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"1", "0"}
+        );
+        UserAction[] actions = {
+                new ExitAction()
+        };
+        new StartUI(out).init(in, tracker, actions);
+        String ln = System.lineSeparator();
+        String excepted = "Menu:" + ln
+                + "0. Exit Program" + ln
+                + "Wrong input, you can select: 0 .. 0" + ln
+                + "Menu:" + ln
+                + "0. Exit Program" + ln;
+        assertThat(out.toString(), is(excepted));
+    }
+
+    @Test
+    public void whenValidExit() {
+        Tracker tracker = new Tracker();
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"0"}
+        );
+        UserAction[] actions = {
+                new ExitAction()
+        };
+        new StartUI(out).init(in, tracker, actions);
+        String ln = System.lineSeparator();
+        String excepted = "Menu:" + ln
+                + "0. Exit Program" + ln;
+        assertThat(out.toString(), is(excepted));
+    }
+
 }
