@@ -19,14 +19,12 @@ public class ValidateInputTest {
 
     @Test
     public void whenMultiValidInput() {
-        String[] answers = {"1", "2"};
-        Input in = new StubInput(answers);
+        Input in = new StubInput(new String[] {"1", "2"});
         Input input = new ValidateInput(in, new StubOutput());
-        int rsl;
-        for (String answer : answers) {
-            rsl = input.askInt("Enter menu");
-            assertThat(rsl, is(Integer.parseInt(answer)));
-        }
+        int rsl = input.askInt("Enter menu");
+        assertThat(rsl, is(1));
+        rsl = input.askInt("Enter menu");
+        assertThat(rsl, is(2));
     }
 
     @Test
