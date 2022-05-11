@@ -8,11 +8,10 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-
 public class ItemAscByNameTest {
 
     @Test
-    public void WhenAscByName() {
+    public void whenAscByName() {
         List<Item> items = new ArrayList<>();
         items.add(new Item("Second"));
         items.add(new Item("Third"));
