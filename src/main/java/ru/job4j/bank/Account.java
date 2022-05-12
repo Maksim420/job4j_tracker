@@ -2,8 +2,19 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описывает структуру хранения банковского счета.
+ * @author Popov Maksim
+ * @version 1.0
+ */
 public class Account {
+    /**
+     * Реквизиты счета (номер, БИК).
+     */
     private String requisite;
+    /**
+     * Остаток баланса.
+     */
     private double balance;
 
     public Account(String requisite, double balance) {

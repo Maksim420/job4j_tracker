@@ -2,8 +2,19 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описывает структуру хранения информации о пользователе.
+ * @author Popov Maksim
+ * @version 1.0
+ */
 public class User {
+    /**
+     * Серия и номер паспорта.
+     */
     private String passport;
+    /**
+     * ФИО
+     */
     private String username;
 
     public User(String passport, String username) {
